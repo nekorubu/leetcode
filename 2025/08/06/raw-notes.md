@@ -1,0 +1,24 @@
+- Looking at [the problem for today](https://leetcode.com/problems/fruits-into-baskets-iii/?envType=daily-question&envId=2025-08-06)
+	- It looks identical to the one from yesterday, but the difficulty's "Medium"
+		- The increase in difficulty might be coming from the test cases
+			- I can probably take my solution from yesterday and try to tweak it to fit the new test cases
+- So I was right about the test cases being different
+	- Actually, the problem is nearly identical, save for the constraints being much more liberal:
+		- So I need to figure out how to do it much faster...
+			- Funny enough, my past implementation almost worked; it passed 736/740 test cases
+				- The failures were likely all due to the time limit being exceeded
+			- Oh wait
+				- Based on the tags for this one, I might need to
+					- Sort the baskets ~~and fruits~~
+					- Do a binary search to find the smallest basket that can fit the fruits' quantity
+					- Okay, idea
+						- For the sorting, I can sort vectors with the `.sort()` method
+							- But this probably won't work if the vector isn't mutable
+								- I could make a mutable clone, but that could prove to be problematic for time...
+						- For the binary search, I can use the `.binary_search()` method and search for the number of fruit
+							- Even if I don't find the exact number, I think I can unwrap the `Result::Err` to get the index of the closest basket in size
+- Didn't manage to solve this one
+    - [Here's what I ended up getting so far, though](./3479.fruit-into-baskets-iii.rs)
+    - The best I was able to come up with was able to pass the 2nd test case, but not the first
+	    - In essence, that was because, with the method of using binary search, I was breaking the arrangement that would've given the proper answer
+		    - A [segment tree](https://cp-algorithms.com/data_structures/segment_tree.html) might give me the answer that I was looking for, but I don't really know for sure because I never checked it within the time I set for myself to try and solve this

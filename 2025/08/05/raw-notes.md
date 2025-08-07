@@ -1,0 +1,18 @@
+- Maybe what I could do is
+	- For each element in `fruits`
+		- For each element in `baskets`
+			- If `baskets[y] >= fruits[x]`
+				- Remove `baskets[y]` and `fruits[x]`
+					- `continue` to the next iteration
+						- It's probably implied that this will do this, though
+							- Actually, maybe not
+						- Actually, might want to `break` after all
+					- Unfortunately, this won't work unless I change `fruits` and `baskets` to be mutable
+						- Which I'm assuming that I can't, so I won't
+							- I could clone the vectors and manipulate those, but there might be a simpler, less memory intensive way to do that...
+								- Actually, doing that doesn't work either...
+									- I need to keep track of which baskets have been used
+										- Maybe create vectors that contain the indices of the baskets/fruits that have been placed?
+									- Actually, I think the issue was probably coming from the
+	- Once we've gotten to the end, count up the amount of leftover fruit types and return it
+		- Could probably get `fruits.len()` and convert that to an `i32` from a `usize`

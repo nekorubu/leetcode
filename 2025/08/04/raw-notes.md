@@ -1,0 +1,23 @@
+- I think a way to possibly go about this would be to simply try and go through each "route" and store the-
+	- Actually, wait, this actually might be more simpler than I thought
+		- I think I would have to do this like so
+			- Store the numbers of the types of fruit that I collect in an array of sorts
+				- The size must be 2 and cannot go any higher
+			- Store the number of fruit collected in another variable
+			- Store the highest number of fruit collected in another variable that persists between loops
+			- Then, to start
+				- Start at the beginning of the array/vector
+					- Take the number at the first point, and add it to the array
+						- Add a fruit to the total count
+					- Go to the next one
+						- If the number isn't in the array, Take the number at the first point, and add it to the array
+						- Add a fruit to the total count
+					- Go to the next one
+						- If the number isn't in the array at all, stop
+							- Otherwise, Add a fruit to the total count
+								- Keep doing this until you reach If the number isn't in the array at all, stop or the end of the array
+					- Once you stop, save the Store the number of fruit collected in another variable to the Store the highest number of fruit collected in another variable that persists between loops
+						- From here, go to the next number and start the loop again
+							- If the Store the number of fruit collected in another variable is higher than the Store the highest number of fruit collected in another variable that persists between loops, update the Store the highest number of fruit collected in another variable that persists between loops to be that new number
+					- Once you get to the end of the array, return the Store the highest number of fruit collected in another variable that persists between loops
+						- There might be a way to save some time by stopping at the second-to-last "tree" instead of the last one
