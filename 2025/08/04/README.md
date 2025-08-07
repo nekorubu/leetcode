@@ -14,3 +14,5 @@ You know what that test case was?
 **99,997 zeroes**, followed by *a 1, 2, and a 3*.
 
 I eventually solved it by just making loop short-circuit if the current number was the same as the previous one, but good grief...
+
+[Here was my solution](./904.fruit-into-baskets.rs).
