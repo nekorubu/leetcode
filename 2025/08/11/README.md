@@ -7,6 +7,7 @@ Once I figured out what they were actually asking you to do, I was finally able 
 The funniest moment while solving this came from line 7, where I was trying to figure out how to find the nearest power of 2 to the number I was given. As I was searching, I came across [this Reddit post](https://www.reddit.com/r/learnpython/comments/7ga2ng/how_to_find_the_closest_power/) asking for the same thing. [The top comment](https://www.reddit.com/r/learnpython/comments/7ga2ng/how_to_find_the_closest_power/dqhvcod/) spoke directly to me:
 
 > Logarithm. You want to calculate the log.
+
 <sub>mfw i forget that logarithms exist</sub>
 
 Once I was done with that, though, I just needed to figure out how to produce the answer from the first test case to solve the rest of them. Thankfully, I didn't have to optimize it any more to beat the time limit, though I'm aware that [my solution](./2438.range-product-queries-of-powers.py) isn't the fastest one by any means.
