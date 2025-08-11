@@ -1,0 +1,15 @@
+- So with that being said, here's how I could possibly do the problem
+	- Take `n`, and do `n % (2^[biggest power of 2 <= the number itself])`
+		- Will need to break this step down some more
+		- Add that to the array `powers`
+			- Then, from there all the way to 0, do this again and again
+				- Put all those numbers into `powers`
+	- Once `powers` has been populated, look at `queries`
+		- Define an `answers` array
+			- Maybe initialize it to the size of `queries` and fill it with `1`s
+		- For each `queries[i]`,
+			- For each number `j` within the range specified at `queries[i]`,
+				- `answers[i] = answers[i] *` [2^`j`]
+				- Finally, `answers[i] = answers[i] %` [10^9 + 7]
+					- There might be a better way to do this step that might be faster that I'll likely have to consider in order to beat the time limit
+	- Once that's all done, return `answers`
